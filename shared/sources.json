@@ -472,5 +472,165 @@
     "color": "green",
     "interval": 1800000,
     "title": "最热"
+  },
+  "czju": {
+    "title": "新闻中心",
+    "name": "苏州财政",
+    "column": "china",
+    "home": "https://czju.suzhou.gov.cn/",
+    "color": "blue",
+    "interval": 600000
+  },
+  "njczj": {
+    "title": "财政动态",
+    "name": "南京财政",
+    "column": "china",
+    "home": "https://czj.nanjing.gov.cn/cjdt/",
+    "color": "blue",
+    "interval": 600000
+  },
+  "ycczj": {
+    "title": "财政动态",
+    "name": "盐城财政",
+    "column": "china",
+    "home": "https://czj.yancheng.gov.cn/col/col307/index.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "wxczj": {
+    "title": "财政动态",
+    "name": "无锡财政",
+    "column": "china",
+    "home": "https://cz.wuxi.gov.cn/gzdt/",
+    "color": "red",
+    "interval": 600000
+  },
+  "xzczj": {
+    "name": "徐州财政",
+    "column": "china",
+    "home": "https://czj.xz.gov.cn/xwzx/001001/subPage.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "czczj": {
+    "name": "常州财政局",
+    "column": "china",
+    "home": "https://czj.changzhou.gov.cn/class/OJPCNLOE",
+    "color": "green",
+    "interval": 600000
+  },
+  "zjczj": {
+    "name": "镇江财政",
+    "column": "china",
+    "home": "https://czj.zhenjiang.gov.cn/czj/bddt/list.shtml",
+    "color": "blue",
+    "interval": 600000
+  },
+  "sqczj": {
+    "name": "宿迁财政",
+    "column": "china",
+    "home": "https://sqcz.suqian.gov.cn/sczj/gzdt/list.shtml",
+    "color": "blue",
+    "interval": 600000
+  },
+  "lygczj": {
+    "name": "连云港财政",
+    "column": "china",
+    "home": "http://czj.lyg.gov.cn/cjxx/cjxx.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "ntczj": {
+    "name": "南通财政",
+    "column": "china",
+    "home": "https://czj.nantong.gov.cn/ntsczj/bmdt/bmdt.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "haczj": {
+    "title": "新闻中心",
+    "name": "淮安财政",
+    "column": "china",
+    "home": "http://czj.huaian.gov.cn/xwdt/gzdt/list.html",
+    "color": "green",
+    "interval": 600000
+  },
+  "szsf": {
+    "name": "苏州市政府",
+    "column": "china",
+    "home": "https://www.suzhou.gov.cn/szsrmzf/szyw/nav_list.shtml",
+    "color": "blue",
+    "interval": 600000
+  },
+  "sz": {
+    "name": "名称苏州",
+    "column": "china",
+    "home": "https://news.2500sz.com/szgc/index.shtml",
+    "color": "blue",
+    "interval": 600000
+  },
+  "shczj": {
+    "name": "上海财政",
+    "column": "china",
+    "home": "https://czj.sh.gov.cn/zss/xwzx/czyw/index.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "nda": {
+    "redirect": "nda-sjzg",
+    "name": "国家数据",
+    "column": "china",
+    "home": "https://www.nda.gov.cn/sjj/ywpd/sjzg/list/index_pc_1.html",
+    "color": "blue",
+    "interval": 600000,
+    "title": "数字中国"
+  },
+  "nda-sjzg": {
+    "name": "国家数据",
+    "column": "china",
+    "home": "https://www.nda.gov.cn/sjj/ywpd/sjzg/list/index_pc_1.html",
+    "color": "blue",
+    "interval": 600000,
+    "title": "数字中国"
+  },
+  "nda-zcgh": {
+    "name": "国家数据",
+    "column": "china",
+    "home": "https://www.nda.gov.cn/sjj/ywpd/zcgh/list/index_pc_1.html",
+    "color": "blue",
+    "interval": 600000,
+    "title": "政策规划"
+  },
+  "nda-szsh": {
+    "name": "国家数据",
+    "column": "china",
+    "home": "https://www.nda.gov.cn/sjj/ywpd/szsh/list/index_pc_1.html",
+    "color": "blue",
+    "interval": 600000,
+    "title": "数字社会"
+  },
+  "yzczj": {
+    "title": "财政动态",
+    "name": "扬州财政",
+    "column": "china",
+    "home": "https://czj.yangzhou.gov.cn/jgjj/czxw/czdt/index.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "tzczj": {
+    "title": "部门动态",
+    "name": "泰州财政",
+    "column": "china",
+    "home": "https://czj.taizhou.gov.cn/xwzx/bmdt/index.html",
+    "color": "blue",
+    "interval": 600000
+  },
+  "szgzw": {
+    "title": "国资要闻",
+    "name": "苏州国资",
+    "column": "china",
+    "home": "https://guozw.suzhou.gov.cn/gzw/gzyw/olist.shtml",
+    "color": "blue",
+    "interval": 600000
   }
 }

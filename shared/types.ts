@@ -1,6 +1,10 @@
 import type { colors } from "unocss/preset-mini"
-import type { columns, fixedColumnIds } from "./metadata"
+import type { columns } from "./metadata"
 import type { originSources } from "./pre-sources"
+
+// 定义固定栏目ID
+export const FIXED_COLUMN_IDS = ["focus", "hottest", "realtime", "daily"] as const
+export type FixedColumnID = typeof FIXED_COLUMN_IDS[number]
 
 export type Color = "primary" | Exclude<keyof typeof colors, "current" | "inherit" | "transparent" | "black" | "white">
 
@@ -33,7 +37,6 @@ export interface PrimitiveMetadata {
   action: "init" | "manual" | "sync"
 }
 
-export type FixedColumnID = (typeof fixedColumnIds)[number]
 export type HiddenColumnID = Exclude<ColumnID, FixedColumnID>
 
 export interface OriginSource extends Partial<Omit<Source, "name" | "redirect">> {
