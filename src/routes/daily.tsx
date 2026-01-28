@@ -18,18 +18,8 @@ interface DailyReportList {
   }>
 }
 
-interface DailyReport {
-  date: string
-  content: string
-}
-
 async function fetchDailyList(): Promise<DailyReportList> {
   const res = await ofetch<{ status: string, data: DailyReportList }>("/api/daily/list")
-  return res.data
-}
-
-async function fetchDailyReport(date: string): Promise<DailyReport> {
-  const res = await ofetch<{ status: string, data: DailyReport }>(`/api/daily/${date}`)
   return res.data
 }
 
@@ -47,12 +37,6 @@ function DailyComponent() {
   const { data: listData, isLoading: isListLoading } = useQuery({
     queryKey: ["daily-list"],
     queryFn: fetchDailyList,
-  })
-
-  const { data: reportData, isLoading: isReportLoading } = useQuery({
-    queryKey: ["daily-report", selectedDate],
-    queryFn: () => fetchDailyReport(selectedDate!),
-    enabled: !!selectedDate,
   })
 
   const [isGenerating, setIsGenerating] = useState(false)
@@ -236,32 +220,24 @@ function DailyComponent() {
                 请选择日期查看日报
               </div>
             )
-          : isReportLoading
-            ? (
-                <div className="flex items-center justify-center h-full text-sm op-50">
-                  加载中...
-                </div>
-              )
-            : reportData
-              ? (
-                  <div>
-                    <h1 className="text-2xl font-bold mb-6 pb-4 border-b border-primary/10">
-                      {selectedDate}
-                      {" "}
-                      日报
-                    </h1>
-                    <div
-                      className="daily-report-content"
-                      // eslint-disable-next-line react-dom/no-dangerously-set-innerhtml
-                      dangerouslySetInnerHTML={{ __html: reportData.content }}
-                    />
-                  </div>
-                )
-              : (
-                  <div className="flex items-center justify-center h-full text-sm op-50">
-                    加载失败
-                  </div>
-                )}
+          : (
+              <div>
+                <h1 className="text-2xl font-bold mb-6 pb-4 border-b border-primary/10">
+                  {selectedDate}
+                  {" "}
+                  日报
+                </h1>
+                <iframe
+                  className="daily-report-iframe"
+                  referrerPolicy="no-referrer"
+                  sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                  src={`/api/daily/raw/${selectedDate}`}
+                  title={`${selectedDate} 日报`}
+                  scrolling="yes"
+                  style={{ width: "100%", height: "75vh", border: "0" }}
+                />
+              </div>
+            )}
       </div>
     </div>
   )
