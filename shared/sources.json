@@ -479,6 +479,7 @@
     "column": "china",
     "home": "https://czju.suzhou.gov.cn/",
     "color": "blue",
+    "icon": "icons/szcz.jpg",
     "interval": 600000
   },
   "njczj": {
@@ -487,6 +488,7 @@
     "column": "china",
     "home": "https://czj.nanjing.gov.cn/cjdt/",
     "color": "blue",
+    "icon": "icons/njcz.jpg",
     "interval": 600000
   },
   "ycczj": {
@@ -495,6 +497,7 @@
     "column": "china",
     "home": "https://czj.yancheng.gov.cn/col/col307/index.html",
     "color": "blue",
+    "icon": "icons/yccz.jpg",
     "interval": 600000
   },
   "wxczj": {
@@ -503,6 +506,7 @@
     "column": "china",
     "home": "https://cz.wuxi.gov.cn/gzdt/",
     "color": "red",
+    "icon": "icons/wxcz.jpg",
     "interval": 600000
   },
   "xzczj": {
@@ -510,6 +514,7 @@
     "column": "china",
     "home": "https://czj.xz.gov.cn/xwzx/001001/subPage.html",
     "color": "blue",
+    "icon": "icons/xzcz.jpg",
     "interval": 600000
   },
   "czczj": {
@@ -517,6 +522,7 @@
     "column": "china",
     "home": "https://czj.changzhou.gov.cn/class/OJPCNLOE",
     "color": "green",
+    "icon": "icons/czcz.jpg",
     "interval": 600000
   },
   "zjczj": {
@@ -524,6 +530,7 @@
     "column": "china",
     "home": "https://czj.zhenjiang.gov.cn/czj/bddt/list.shtml",
     "color": "blue",
+    "icon": "icons/zjcz.jpg",
     "interval": 600000
   },
   "sqczj": {
@@ -531,6 +538,7 @@
     "column": "china",
     "home": "https://sqcz.suqian.gov.cn/sczj/gzdt/list.shtml",
     "color": "blue",
+    "icon": "icons/sqcz.jpg",
     "interval": 600000
   },
   "lygczj": {
@@ -538,6 +546,7 @@
     "column": "china",
     "home": "http://czj.lyg.gov.cn/cjxx/cjxx.html",
     "color": "blue",
+    "icon": "icons/lygcz.jpg",
     "interval": 600000
   },
   "ntczj": {
@@ -545,6 +554,7 @@
     "column": "china",
     "home": "https://czj.nantong.gov.cn/ntsczj/bmdt/bmdt.html",
     "color": "blue",
+    "icon": "icons/ntcz.jpg",
     "interval": 600000
   },
   "haczj": {
@@ -553,6 +563,41 @@
     "column": "china",
     "home": "http://czj.huaian.gov.cn/xwdt/gzdt/list.html",
     "color": "green",
+    "icon": "icons/hacz.jpg",
+    "interval": 600000
+  },
+  "yzczj": {
+    "title": "财政动态",
+    "name": "扬州财政",
+    "column": "china",
+    "home": "https://czj.yangzhou.gov.cn/jgjj/czxw/czdt/index.html",
+    "color": "blue",
+    "icon": "icons/yzcz.jpg",
+    "interval": 600000
+  },
+  "tzczj": {
+    "title": "部门动态",
+    "name": "泰州财政",
+    "column": "china",
+    "home": "https://czj.taizhou.gov.cn/xwzx/bmdt/index.html",
+    "color": "blue",
+    "icon": "icons/tzcz.jpg",
+    "interval": 600000
+  },
+  "shczj": {
+    "name": "上海财政",
+    "column": "china",
+    "home": "https://czj.sh.gov.cn/zss/xwzx/czyw/index.html",
+    "color": "blue",
+    "icon": "icons/shcz.jpg",
+    "interval": 600000
+  },
+  "szgzw": {
+    "title": "国资要闻",
+    "name": "苏州国资",
+    "column": "china",
+    "home": "https://guozw.suzhou.gov.cn/gzw/gzyw/olist.shtml",
+    "color": "blue",
     "interval": 600000
   },
   "szsf": {
@@ -566,13 +611,6 @@
     "name": "名称苏州",
     "column": "china",
     "home": "https://news.2500sz.com/szgc/index.shtml",
-    "color": "blue",
-    "interval": 600000
-  },
-  "shczj": {
-    "name": "上海财政",
-    "column": "china",
-    "home": "https://czj.sh.gov.cn/zss/xwzx/czyw/index.html",
     "color": "blue",
     "interval": 600000
   },
@@ -608,29 +646,5 @@
     "color": "blue",
     "interval": 600000,
     "title": "数字社会"
-  },
-  "yzczj": {
-    "title": "财政动态",
-    "name": "扬州财政",
-    "column": "china",
-    "home": "https://czj.yangzhou.gov.cn/jgjj/czxw/czdt/index.html",
-    "color": "blue",
-    "interval": 600000
-  },
-  "tzczj": {
-    "title": "部门动态",
-    "name": "泰州财政",
-    "column": "china",
-    "home": "https://czj.taizhou.gov.cn/xwzx/bmdt/index.html",
-    "color": "blue",
-    "interval": 600000
-  },
-  "szgzw": {
-    "title": "国资要闻",
-    "name": "苏州国资",
-    "column": "china",
-    "home": "https://guozw.suzhou.gov.cn/gzw/gzyw/olist.shtml",
-    "color": "blue",
-    "interval": 600000
   }
 }

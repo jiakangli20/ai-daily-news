@@ -113,6 +113,13 @@ function SourceItem({ item }: {
   item: SourceItemProps
 }) {
   const { isFocused, toggleFocus } = useFocusWith(item.id)
+
+  const icon = (() => {
+    const raw = sources[item.id]?.icon
+    if (raw) return raw.startsWith("icons/") ? `/${raw}` : raw
+    return `/icons/${item.id.split("-")[0]}.png`
+  })()
+
   return (
     <Command.Item
       keywords={[item.name, item.title ?? "", item.pinyin]}
@@ -124,7 +131,7 @@ function SourceItem({ item }: {
         <span
           className={$("w-4 h-4 rounded-md bg-cover")}
           style={{
-            backgroundImage: `url(/icons/${item.id.split("-")[0]}.png)`,
+            backgroundImage: `url(${icon}), url(/icons/default.png)`,
           }}
         />
         <span>{item.name}</span>

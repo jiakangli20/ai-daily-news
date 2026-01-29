@@ -64,6 +64,8 @@ export interface Source {
   interval: number
   color: Color
 
+  icon?: string
+
   /**
    * Subtitle 小标题
    */

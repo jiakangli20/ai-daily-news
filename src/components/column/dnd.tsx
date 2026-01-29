@@ -130,6 +130,12 @@ function DndWrapper({ items, setItems, isSingleColumn, children }: PropsWithChil
 }
 
 function CardOverlay({ id }: { id: SourceID }) {
+  const icon = (() => {
+    const raw = sources[id]?.icon
+    if (raw) return raw.startsWith("icons/") ? `/${raw}` : raw
+    return `/icons/${id.split("-")[0]}.png`
+  })()
+
   return (
     <div className={$(
       "flex flex-col p-4 backdrop-blur-5",
@@ -142,7 +148,7 @@ function CardOverlay({ id }: { id: SourceID }) {
           <div
             className={$("w-8 h-8 rounded-full bg-cover")}
             style={{
-              backgroundImage: `url(/icons/${id.split("-")[0]}.png)`,
+              backgroundImage: `url(${icon}), url(/icons/default.png)`,
             }}
           />
           <span className="flex flex-col">
