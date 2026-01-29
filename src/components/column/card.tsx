@@ -104,6 +104,12 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
 
   const { isFocused, toggleFocus } = useFocusWith(id)
 
+  const icon = (() => {
+    const raw = sources[id]?.icon
+    if (raw) return raw.startsWith("icons/") ? `/${raw}` : raw
+    return `/icons/${id.split("-")[0]}.png`
+  })()
+
   return (
     <>
       <div className={$("flex justify-between mx-2 mt-0 mb-2 items-center")}>
@@ -114,7 +120,7 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
             href={sources[id].home}
             title={sources[id].desc}
             style={{
-              backgroundImage: `url(/icons/${id.split("-")[0]}.png)`,
+              backgroundImage: `url(${icon}), url(/icons/default.png)`,
             }}
           />
           <span className="flex flex-col">
@@ -207,7 +213,8 @@ function ExtraInfo({ item }: { item: NewsItem }) {
     return <>{item.extra.info}</>
   }
   if (item?.extra?.icon) {
-    const { url, scale } = typeof item.extra.icon === "string" ? { url: item.extra.icon, scale: undefined } : item.extra.icon
+    const { url: rawUrl, scale } = typeof item.extra.icon === "string" ? { url: item.extra.icon, scale: undefined } : item.extra.icon
+    const url = rawUrl.startsWith("icons/") ? `/${rawUrl}` : rawUrl
     return (
       <img
         src={url}

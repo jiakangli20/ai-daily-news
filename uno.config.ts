@@ -40,6 +40,11 @@ export default defineConfig({
       `bg-${k} color-${k} border-${k} sprinkle-${k} shadow-${k}
        bg-${k}-500 color-${k}-500
        dark:bg-${k} dark:color-${k}`.trim().split(/\s+/)).flat(),
+    "i-ph:star-fill",
+    "i-ph:star-duotone",
+    "i-ph:arrow-counter-clockwise-duotone",
+    "i-ph:circle-dashed-duotone",
+    "i-ph:arrow-fat-up-duotone",
   ],
   extendTheme: (theme) => {
     // @ts-expect-error >_<

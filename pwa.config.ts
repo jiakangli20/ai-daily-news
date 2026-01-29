@@ -3,7 +3,7 @@ import type { VitePWAOptions } from "vite-plugin-pwa"
 import { VitePWA } from "vite-plugin-pwa"
 
 const pwaOption: Partial<VitePWAOptions> = {
-  includeAssets: ["icon.svg", "apple-touch-icon.png"],
+  includeAssets: ["/icons/qyzx.jpg"],
   filename: "swx.js",
   manifest: {
     name: "NewsNow",
@@ -12,25 +12,25 @@ const pwaOption: Partial<VitePWAOptions> = {
     theme_color: "#F14D42",
     icons: [
       {
-        src: "pwa-192x192.png",
+        src: "/icons/qyzx.jpg",
         sizes: "192x192",
-        type: "image/png",
+        type: "image/jpeg",
       },
       {
-        src: "pwa-512x512.png",
+        src: "/icons/qyzx.jpg",
         sizes: "512x512",
-        type: "image/png",
+        type: "image/jpeg",
       },
       {
-        src: "pwa-512x512.png",
+        src: "/icons/qyzx.jpg",
         sizes: "512x512",
-        type: "image/png",
+        type: "image/jpeg",
         purpose: "any",
       },
       {
-        src: "pwa-512x512.png",
+        src: "/icons/qyzx.jpg",
         sizes: "512x512",
-        type: "image/png",
+        type: "image/jpeg",
         purpose: "maskable",
       },
     ],

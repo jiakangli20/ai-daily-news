@@ -1,17 +1,49 @@
 services:
   newsnow:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: newsnow:latest
+    container_name: newsnow
+    restart: unless-stopped
     ports:
       - '4444:4444'
     volumes:
       - newsnow_data:/usr/app/.data
     environment:
-      - G_CLIENT_ID=
-      - G_CLIENT_SECRET=
-      - JWT_SECRET=
-      - INIT_TABLE=true
-      - ENABLE_CACHE=true
+      - HOST=0.0.0.0
+      - PORT=4444
+      - NODE_ENV=production
+      - G_CLIENT_ID=${G_CLIENT_ID:-}
+      - G_CLIENT_SECRET=${G_CLIENT_SECRET:-}
+      - JWT_SECRET=${JWT_SECRET:-}
+      - INIT_TABLE=${INIT_TABLE:-true}
+      - ENABLE_CACHE=${ENABLE_CACHE:-true}
+    networks:
+      - newsnow_network
+    # 健康检查（可选）
+    # healthcheck:
+    #   test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:4444/api/latest"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 40s
+    # 资源限制（可选，根据服务器配置调整）
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '1.0'
+    #       memory: 1G
+    #     reservations:
+    #       cpus: '0.5'
+    #       memory: 512M
 
 volumes:
   newsnow_data:
     name: newsnow_data
+    driver: local
+
+networks:
+  newsnow_network:
+    name: newsnow_network
+    driver: bridge
